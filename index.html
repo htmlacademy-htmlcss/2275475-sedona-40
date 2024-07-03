@@ -3,13 +3,14 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link rel="icon"  href="favicon.ico">
     <link href="css/style.css" rel="stylesheet">
     <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 
   </head>
   <body>
-      <div class="all-content">
-      <header class="page-header">
+      <div class="all-content" >
+      <header class="page-header" data-test="header">
       <nav class="navigation">
         <a class="logo" href="index.html">
           <img src="img/svg/logo.svg" width="140" height="70" alt="Логотип Седона"></a>
@@ -48,8 +49,8 @@
 
   <!--Конец шапки-->
 
-    <main class="main-content">
-    <section class="hero">
+    <main class="main-content" data-test="main">
+    <section class="hero" data-test="hero">
      <h1 class="visually-hidden">Седона</h1>
      <img class="hero-name" src="img/svg/welcome.svg" width="458" height="352" alt="Welcome to the gorgeous Sedona, because the Grand Canyon sucks!">
     </section> 
@@ -60,14 +61,14 @@
 
       <!-- Галерея Седоны -->
 
-      <section class="blog-gallery">
+      <section class="blog-gallery" data-test="advantages">
             <div class="content-with-img">
               <h3 class="blog-content-title title-line">Настоящий городок</h3>
               <p class="content-text-city">Седона — не аттракцион для туристов, там течёт своя жизнь</p>     
             </div>
             <img class="city-img" src="img/photo-1.jpg" width="800" height="385" alt="Фото города">
       </section>
-     <ul class="blog-content-list">
+     <ul class="blog-content-list" data-test="advantages">
         <li class="blog-content-item">
           <h3 class="blog-content-title title-line">Небольшая <br> площадь</h3>
           <p class="blog-content-text">Все достопримечательности находятся очень близко</p>
@@ -97,7 +98,7 @@
         <p class="advantages-header-text">Опытный персонал и качественное обслуживание!</p>
         </div>
      <ul class="advantages-list">
-        <li class="advantages-item house">
+        <li class="advantages-item">
          <!-- <img src="img/svg/home.svg" alt="Дом"> -->
           <h3 class="advantages-title title-svg-home">Жилье</h3>
           <p class="advantages-text">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
@@ -117,22 +118,23 @@
 
     <section class="booking">
       <h2 class="booking-title">Заинтересовались?</h2>
-      <p class="booking-text">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-      <button class="button-search" type=button>Поиск гостиницы в Седоне</button>
+      <p class="booking-text">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+      <button class="button btn-search" type=button>Поиск гостиницы в Седоне</button>
     </section>
     <section class="subscribe">
+      <div class="subscribe-container">
     <h2 class="subscribe-title">ПОДПИШИТЕСЬ НА РАССЫЛКУ</h2>
-    <img src="img/Subscribe.jpg" width="1200" height="485" alt="Каньон с размытым фоном">
-    <p class="subscribe-text">Только полезная информация и никакого спама, честное бойскаутское!</p>
+    <p class="subscribe-text">Только полезная информация и никакого спама, <br> честное бойскаутское!</p>
     <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
     <label class="visually-hidden" for="subscription-email">Введите E-mail</label>
     <input class="field" placeholder="Ваш E-mail" type="email" name="subscription-email" id="subscription-email" required>
-    <button class="button-sub" type="submit">Подписаться</button>
+    <button class="button-subscribe" type="submit">Подписаться</button>
     </form>
+    </div>
     </section>
     </main>
 
-    <footer class="main-footer">
+    <footer class="main-footer" data-test="footer">
      <section class="contacts">
       <h2 class="visually-hidden">Социальные сети</h2>
       <ul class="social-list">

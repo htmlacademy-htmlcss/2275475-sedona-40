@@ -13,6 +13,10 @@
 	src: url("../fonts/ptsans-700.woff2") format("woff2");
 }
 
+*{
+	outline: 1px solid green !important;
+}
+
 body{
 	height: 100%;
 	margin: 0;
@@ -121,6 +125,7 @@ body{
 
 
 .navigation-button{
+	font-family: inherit;
     font-size: 16px;
     font-weight: 700;
     color: #ffffff;
@@ -341,11 +346,11 @@ flex-direction: row-reverse;
 .title-svg-gift:before{
 	background-image: url(../img/svg/gift.svg);
 	content: "";
-    width: 76px;
+    width: 65px;
     height: 76px;
     position: absolute;
     top:80px;
-    right: 160px;
+    right: 170px;
 }		
 
 .advantages-list{
@@ -373,6 +378,113 @@ flex-direction: row-reverse;
 	text-align: center;
 	color: #333333;
 }
+
+	/*Блок с поиском */
+
+.booking{
+	width: 1200px;
+	margin: 0;
+	padding: 0 auto;
+	padding: 96px 304px;
+	text-align: center;
+}
+
+
+.booking-title{
+	font-weight: 700;
+	font-size: 30px;
+	line-height: 120%;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.booking-text{
+	font-weight: 400;
+	font-size: 22px;
+	line-height: 118%;
+	text-align: center;
+	color: #000000;
+	padding-bottom: 54px;
+}
+
+
+
+.btn-search{
+	font-family: inherit;
+	border-radius: 4px;
+	padding: 8px 50px;
+	background: #756157;
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 180%;
+	text-transform: uppercase;
+	text-align: center;
+	color: white;
+	border: none;
+	cursor: pointer;
+}
+	
+	/*Блок с рассылкой*/
+
+.subscribe{
+	background-image: url(../img/subscribe.jpg);
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	background-color: #gray;
+	text-align: center;
+}
+
+.subscribe-container{
+	padding: 70px 258px 100px 258px;
+}
+
+.subscribe-title{
+	font-weight: 700;
+	font-size: 30px;
+	line-height: 120%;
+	text-transform: uppercase;
+	color: white;
+}
+
+.subscribe-text{
+	font-weight: 400;
+	font-size: 22px;
+	line-height: 118%;
+	color: white;
+}
+
+.subscribe-form {
+	display: flex;
+	margin-top: 54px;
+
+}
+
+.field{
+	font-family: inherit;
+	border-radius: 4px 0 0 4px;
+	padding: 12px 20px;
+	width: 452px;
+	height: 52px;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 133%;
+	border: none;
+}
+
+.button-subscribe{
+	width: 232px;
+	font-family: inherit;
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 180%;
+	text-transform: uppercase;
+	color: white;
+	background-color:#82B3D3;
+	text-align: center;
+	border: none;
+	cursor: pointer;
+}
+
 
 /*Футер*/
 .main-footer{
