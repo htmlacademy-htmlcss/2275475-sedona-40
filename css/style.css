@@ -13,10 +13,10 @@
 	src: url("../fonts/ptsans-700.woff2") format("woff2");
 }
 
-*{
+/*{
 	outline: 1px solid green !important;
 }
-
+*/
 body{
 	height: 100%;
 	margin: 0;
