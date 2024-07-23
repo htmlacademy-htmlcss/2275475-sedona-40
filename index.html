@@ -2,10 +2,11 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Седона</title>
+    <title>Седона</title>
     <link rel="icon"  href="favicon.ico">
     <link href="css/style.css" rel="stylesheet">
-    <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+    <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
+  </script>
   </head>
   <body>
   <div class="all-content">
@@ -124,7 +125,7 @@
     <section class="booking">
       <h2 class="booking-title">Заинтересовались?</h2>
       <p class="booking-text">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-      <button class="button btn-search" type=button>Поиск гостиницы в Седоне</button>
+      <button class="button btn-search" type="button">Поиск гостиницы в Седоне</button>
     </section>
 
     <section class="subscribe">
@@ -180,5 +181,97 @@
     </section>       
     </footer>
   </div>
+
+                    <!--Модальное окно  -->
+
+    <div class="modal-container modal-container-close">
+      <div class="modal">
+          <button class="modal-close-btn" type="button" tabindex="0">
+          <span class="visually-hidden" >Закрыть</span>
+        </button>
+        <section class="modal-content">
+          <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+          <form class="booking-form" action="https://echo.htmlacademy.ru/" method="post">
+            <ul class="popup-list booking-list">
+              <li class="booking-item arrival">
+                <label class="label form-label" for="arrival">Дата заезда:</label>
+                <div class="arrival-box">
+                <input class="input-field" type="text" id="arrival" placeholder="Укажите дату" name="arrival" value="27 апреля 2020">
+                </div>
+              </li>
+              <li class="booking-item departure">
+                <label class="label form-label" for="departure">Дата Выезда:</label>
+                <div class="departure-box">
+                <input class="input-field" type="text" id="departure" placeholder="Укажите дату" name="departure" value="1 сентября 2021">
+                </div>                
+              </li>
+              <li class="booking-item adults">
+                <label class="label form-label" for="adults">Взрослые:</label>
+                <div class="adults-box">
+                  <button class="btn-counter btn-minus" type="button">
+                    <svg class="icon-modal" width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 9V11H17V9H3Z" />
+                    </svg>
+                  </button>
+                  <input class="input-field counter-input" type="number" id="adults" name="adults" value="2" min="1">
+                  <button class="btn-counter btn-plus" type="button">
+                   <svg class="icon-modal" width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M17 9H11V3H9V9H3V11H9V17H11V11H17V9Z" />
+                  </svg>
+                  </button>
+                </div>
+              </li>
+
+              <li class="booking-item children">
+                <label class="form-label" for="children">Дети:</label>
+                <span class="children-info">
+                  <button class="btn-info" type="button" aria-labelledby="tooltip-text">
+                    <svg width="2" height="12" viewBox="0 0 2 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H2V2H0V0ZM2 12H0V3H2V12Z" fill="white"/>
+                    </svg>
+                  </button>
+                   <span class="info-text">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+                </span>
+                <div class="children-box">
+                  <button class="btn-counter btn-minus" type="button">
+                     <svg class="icon-modal" width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 9V11H17V9H3Z" />
+                  </button>
+                  <input class="input-field counter-input" type="number" id="children" name="children" value="2" min="0">
+                  <button class="btn-counter btn-plus" type="button">
+                   <svg class="icon-modal" width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M17 9H11V3H9V9H3V11H9V17H11V11H17V9Z" />
+                  </svg>
+
+                  </button>
+                </div>
+              </li>
+              <li class="booking-item get-item">
+                <button class="btn-get" type="submit">Найти</button>
+              </li>
+            </ul>
+          </form>
+        </section>
+      </div>
+    </div>
+
+ <script>
+   let modal = document.querySelector(".modal-container");
+   let openBtn = document.querySelector(".btn-search");
+   let closeBtn = document.querySelector(".modal-close-btn");
+
+      openBtn.onclick = function () {
+        modal.classList.remove('modal-container-close');
+      };
+      closeBtn.onclick = function () {
+        modal.classList.add('modal-container-close');
+      };
+      window.onclick = function (event) {
+        if (event.target === modal) {
+          modal.classList.add('modal-container-close');
+        };
+      };
+ </script>
+
   </body>
 </html>

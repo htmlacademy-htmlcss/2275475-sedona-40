@@ -56,6 +56,7 @@ html {
 body{
 	margin: 0;
 	padding: 0;
+	min-height: 100%;
 	font-family: "PT-Sans", "Arial", sans-serif;
 	font-size: 18px;
 	line-height: 26px;
@@ -98,7 +99,6 @@ body{
 .page-header{
     margin: 0;
     padding: 0;
-    z-index: 1;
 }
 
 /*Шапка сайта */
@@ -416,7 +416,7 @@ body{
 	margin: 0;
 	width: 400px;
 	height: 385px;
-	padding: 90px 85px;
+	padding: 88px 85px;
 	background-color: rgba(131, 179, 211, 0.2);
 }
 
@@ -477,7 +477,7 @@ body{
 	color: #000000;
 	width: 505px;
 	margin: 0 auto;
-	margin-top: 26px;
+	margin-top: 23px;
 
 }
 
@@ -642,7 +642,8 @@ body{
     text-transform: uppercase;
     hyphens: auto;
     margin: 0;
-    margin-bottom: 23px;
+    margin-bottom: 22px;
+    padding-top: 4px;
 
 }
 
@@ -693,7 +694,7 @@ body{
  .button-subscribe:active{
  	color: var(--texts-background-small);
  	background: var(--buttons-second);
- 	
+
  }
 
 .button-subscribe:focus-visible,
@@ -710,6 +711,7 @@ body{
 	display: flex;
 	justify-content: space-between;
 	padding: 45px 70px;
+	flex-shrink: 0;
 }
 
 .social-list{
@@ -788,8 +790,388 @@ body{
 }
 
 
-	/* Конец Главной страницы */
 
+		/* Модальное окно */
+
+
+
+.modal-container {
+    display: none;
+ 	position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding: 20px 0;
+    background-color: rgba(242, 242, 242, 0.8);
+}
+
+.modal-container-close {
+  display: none;
+}
+.scroll-lock {
+  overflow: hidden;
+}
+
+
+.modal {
+    position: relative;
+    width: 717px;
+    margin: auto;
+    padding: 64px 70px;
+    background-color: #ffffff;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+    border-radius: 30px;
+}
+
+
+.modal-close-btn {
+  position: absolute;
+  padding: 0;
+  top: 64px;
+  right: 52px;
+  width: 52px;
+  height: 52px;
+  border: none;
+  background-image: url("../img/icons/popup-close.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  border: 0;
+  border-radius: 100%;
+  outline: 0;
+  align-items: center;
+  justify-content: center;
+  background-color: #F2F2F2;
+} 
+
+.modal-close-btn:hover{
+	background-color: #e6e6e6;
+}
+
+.modal-close-btn:active{
+	opacity: 0.3;
+}
+
+.modal-close-btn:focus-visible{
+	border: 3px solid var(--buttons-blue-hover);
+
+}
+
+.modal-title {
+	margin: 0;
+	font-family: var(--font-family);
+	font-weight: 700;
+	font-size: 30px;
+	line-height: 120%;
+	text-transform: uppercase;
+	color: var(--texts-texts-basic);
+	margin: 0 0 62px;
+
+}
+
+.booking-item 
+.form-label{
+	font-family: var(--font-family);
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 120%;
+	text-transform: capitalize;
+	color: var(--texts-texts-basic);
+}
+
+.booking-list{
+	display: grid;
+    grid-template-areas:
+        "arrival arrival"
+        "departure departure"
+        "adults children"
+        "submit submit";
+    gap: 48px 88px;
+}
+
+.popup-list{
+	margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.booking-item{
+	display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.arrival {
+    grid-area: arrival;
+}
+
+
+.input-arriral,
+.input-field,
+.label{
+	margin: 0;
+    border: none;
+    padding: 0;
+    display: inline-block;
+    vertical-align: middle;
+    white-space: normal;
+    background: none;
+    appearance: textfield;
+}
+
+.arrival input, 
+.departure input{
+    width: 100%;
+    height: 50px;
+    font-family: var(--font-family);
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 133%;
+    background-color: #f2f2f2;
+    border: 3px solid transparent;
+    border-radius: 4px;
+    padding: 0 17px;
+}
+
+.arrival-box, 
+.departure-box{
+	position: relative;
+    width: 440px;
+}
+
+.input-field:not(.counter-input):focus-visible{
+	outline: none;
+	border: 3px solid var(--buttons-blue-hover);
+
+}	
+
+.arrival-box::before {
+	content: '';
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-image: url(../img/icons/date.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.arrival 
+.arrival-box::after {
+    content: 'Мы не можем отправить вас в прошлое.';
+    position: absolute;
+    display: block;
+    padding: 5px 20px;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 131%;
+    color: var(--texts-error);
+}
+
+.departure {
+    grid-area: departure;
+}
+
+
+.departure-box::before{
+	content: '';
+    position: absolute;
+    top: 14px;
+    right: 20px;
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-image: url(../img/icons/date.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.departure 
+.departure-box::after {
+    content: 'На эти даты есть свободные номера. Пока есть.';
+    position: absolute;
+    display: block;
+    padding: 3px 20px;
+    font-size: 16px;
+    line-height: 21px;
+    color: var(--texts-second);
+}
+
+
+.adults{
+	width: 247px;
+    grid-area: adults;
+}
+
+.adults-box,
+.children-box{
+	width: 110px;
+    height: 48px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.btn-counter{
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 48px;
+    border: 3px solid transparent;
+    background-color: #f2f2f2;
+    cursor: pointer;
+}
+
+.btn-minus{
+	border-radius: 4px 0 0 4px;
+}
+
+.btn-plus{
+	border-radius: 0 4px 4px 0;
+}
+
+.counter-input{
+	width: 30px;
+    height: 48px;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    background-color: #f2f2f2;
+    font-family: var(--font-family);
+}
+
+.counter-input::-webkit-outer-spin-button,
+.counter-input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+.counter-input {
+  -moz-appearance: textfield;
+}
+
+.counter-input:focus{
+	outline: none;
+}
+.btn-minus:focus-visible,
+.btn-plus:focus-visible{
+	outline: none;
+	border: 3px solid var(--buttons-blue-hover);
+}
+
+.icon-modal {
+ opacity: 0.3;
+}
+
+.icon-modal:hover{
+	opacity: 1;
+}
+
+.icon-modal:active{
+	opacity: 0.3;
+}
+
+
+.children-info{
+	position: relative;
+    margin: 0 46px 0 10px;
+}
+
+.btn-info:hover{
+	background-color: var(--buttons-blue-hover);
+}
+
+.btn-info{
+	display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    background-color: var(--icons-second);
+    border: 0;
+    border-radius: 100%;
+    cursor: pointer;
+    outline: 0;
+}
+
+.info-text{
+	position: absolute;
+    top: 40px;
+    left: -110px;
+    width: 256px;
+    padding: 15px 18px 18px 22px;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #ffffff;
+    background-color: #333333;
+    border-radius: 15px;
+    display: none;   
+}
+
+.btn-info:hover + .info-text,
+ .btn-info:focus + .info-text {
+    display: block;
+}
+
+
+.info-text::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -15px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #333 transparent;
+}
+
+
+.get-item {
+    grid-area: submit;
+    padding-left: 7px;
+}
+
+.btn-get{
+	border-radius: 10px;
+	border: none;
+	background: var(--icons-second);
+	font-family: var(--font-family);
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 700;
+    padding: 18px 20px;
+    width: 100%;
+	text-transform: uppercase;
+	text-align: center;
+	color: var(--texts-background-deafault);
+	cursor: pointer;
+}
+
+
+.btn-get:hover{
+    background-color: var(--buttons-blue-hover)
+}
+
+ .btn-get:active{
+ 	color: var(--texts-background-small);
+ 	background-color: var(--buttons-blue-hover)
+ }
+
+ .btn-get:focus-visible{
+	border: 2px solid var(--buttons-blue-hover);
+	outline: none;
+ }
+
+
+	/* Конец Главной страницы */
 
 
 .inner-main{
@@ -1322,7 +1704,7 @@ border: 3px solid #83B3D3;
     margin: 0;
     padding: 0;
     flex-wrap: wrap;
-        margin-bottom: 40px;
+    margin-bottom: 40px;
 }
 
 .search-result-title{
@@ -1759,9 +2141,3 @@ border: 3px solid #83B3D3;
 	line-height: 118%;
 	color: #333333;
 }
-
-
-
-
-
-
