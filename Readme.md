@@ -1,7 +1,8 @@
 # Личный проект «Седона»
 
 * Студент: [Roma Sadykov](https://up.htmlacademy.ru/htmlcss/40/user/2275475).
-* Наставник: `Неизвестно`.
+* Наставник: [Николай Колганов](https://github.com/Espanol-nikkol).
+* Сайт: [Проект Седона](https://ex3mple.github.io/2275475-sedona-40/).
 
 ---
 
