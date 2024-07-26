@@ -13,7 +13,7 @@
     <header class="page-header" data-test="header">
       <nav class="navigation">
         <a class="logo" href="index.html">
-          <img src="img/svg/logo.svg" width="140" height="70" alt="Логотип Седона"></a>
+          <img src="img/svg/logo-sedona.svg" width="140" height="70" alt="Логотип Седона"></a>
           <ul class="navigation-list navigation-list-main">
             <li class="navigation-item ">
               <a class='navigation-link' href="index.html" aria-current='page'>Главная</a>
@@ -25,8 +25,7 @@
               <a class="navigation-link" href="catalog.html">Гостиницы</a>
             </li>
           </ul>
-
-                <ul class="navigation-list navigation-user">
+                <ul class="navigation-user">
           <li class="navigation-item navigation-search">
             <a class="navigation-link search-link" href="#">
               <svg class="search-icon" aria-hidden="true" focusable="false" width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -66,12 +65,11 @@
               <path d="M4.5 10.5001H5.5V8.00005H7.5V10.5001H8.5V7.00005H4.5V10.5001Z"/>
               </svg>
            </a>
-           <a class="breadcrumbs-icon-arrow" href="#">
+           <span class="breadcrumbs-icon-arrow">
               <svg  aria-hidden="true" focusable="false" width="8" height="11" viewBox="0 0 8 11" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M6.91526 4.96875L2.16526 0.71875C1.91526 0.46875 1.41526 0.46875 1.04026 0.71875C0.665263 0.96875 0.790263 1.46875 1.04026 1.71875L5.16526 5.46875L1.16526 9.21875C0.915263 9.46875 0.915263 9.96875 1.16526 10.2188C1.16526 10.3438 1.54026 10.4688 1.66526 10.4688C1.79026 10.4688 2.04026 10.3438 2.16526 10.2188L6.91526 5.96875C7.29026 5.71875 7.29026 5.21875 6.91526 4.96875Z" fill="white"/>
               </svg>
-            </a>
-
+           </span>
           </li>
           <li class="inner-menu-list inner-menu-hotels">
             <a class="menu-link-catalog" href="catalog.html">Гостиницы</a>         
@@ -94,7 +92,6 @@
               <span class="pool">Бассейн</span>
             </label>
            </li>
-
           <li class="hotel-filter-item">
             <label class="parking-field">
               <input class="visually-hidden point-input" type="checkbox" name="parking" id="parking-field" value="parking" checked>
@@ -102,7 +99,6 @@
               <span class="parking">Парковка</span>
             </label>
           </li>
-
           <li class="hotel-filter-item">
             <label class="wifi-field">
               <input class="visually-hidden point-input" type="checkbox" name="wifi" id="wifi-field" value="wifi">
@@ -114,7 +110,6 @@
       </fieldset>
 
       <!-- Второй набор фильтров -->
-
 
       <fieldset class="hotel-filter-group">
         <legend class="hotel-filter-title">Тип Жилья:</legend>
@@ -166,9 +161,9 @@
           </div>
         </fieldset>
       </div>  
-            <div class="button-filter">
-        <button class="button button-apply" type="submit">Применить</button>
-        <button class="button button-reset" type="reset">Сбросить</button>
+            <div class="btn-filter">
+        <button class="button btn-apply" type="submit">Применить</button>
+        <button class="button btn-reset" type="reset">Сбросить</button>
             </div>
       </form>
     </div>
@@ -221,7 +216,6 @@
       </div>
     </div>
 
-
       <!-- Результат поиска отелей -->
 
       <div class="hotels-result">
@@ -244,7 +238,6 @@
             </div>
           </div>
           </li>
-
           <li class="hotel-card-item">
             <div class="hotel-card-info">
               <a class="hotel-card-link" href="#">
@@ -255,16 +248,14 @@
             <span>Гостиница</span>
             <span>От 5000 ₽</span>
           </div>
-          <div class="hotel-info">
-            <a class="btn-more" href="#">Подробнее</a>
-            <button class="btn-favorite favorite-select" type="button">В избранном</button>
-            <span class="rating-stars rating-four"></span>
-            <p class="hotel-card-rating">Рейтинг: 9,2</p>
-          </div>
+            <div class="hotel-info">
+             <a class="btn-more" href="#">Подробнее</a>
+             <button class="btn-favorite favorite-select" type="button">В избранном</button>
+             <span class="rating-stars rating-four"></span>
+             <p class="hotel-card-rating">Рейтинг: 9,2</p>
+            </div>
           </div>
           </li>
-        
-
           <li class="hotel-card-item">
             <div class="hotel-card-info">
               <a class="hotel-card-link" href="#">
@@ -283,7 +274,6 @@
               </div>
             </div>
           </li>
-
           <li class="hotel-card-item">
             <div class="hotel-card-info">
               <a class="hotel-card-link" href="#">
@@ -305,7 +295,7 @@
         </ul>    
         </div>
 
-        <!-- Пагинация -->
+                      <!-- Пагинация -->
 
         <ul class="pagination">
           <li class="pagination-item pagination-current">
@@ -328,13 +318,13 @@
           </li>
         </ul>
     </section>
+ 
+              <!--  Поиск и подписка на рассылку  -->
 
-       
     <section class="subscribe-catalog" data-test="subscribe">
       <div class="subscribe-container-catalog">
     <h2 class="subscribe-title-catalog">ПОДПИШИТЕСЬ НА РАССЫЛКУ</h2>
-    <p class="subscribe-text-catalog">Только полезная информация и никакого спама, <br> честное бойскаутское!</p>
-     
+    <p class="subscribe-text-catalog">Только полезная информация и никакого спама, <br> честное бойскаутское!</p>    
     <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
     <label class="visually-hidden" for="subscription-email">Введите e-mail</label>
     <input class="field" placeholder="Ваш e-mail" type="email" name="subscription-email" id="subscription-email" required>
@@ -343,6 +333,8 @@
    </div>
     </section>
     </main>
+
+                  <!--  Подвал  -->
 
     <footer class="main-footer" data-test="footer">
      <section class="contacts">
@@ -380,8 +372,8 @@
       <h2 class="visually-hidden">Разработчик</h2>
       <a class="htmlacademy" href="https://htmlacademy.ru/intensive/htmlcss">
         <svg class="footer-logo" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="115" height="34">
-                <path d="M0 13.26v2.6h2.5v-2.6H0Zm11.6-8.4c-1.6 0-2.8.7-3.6 1.7h-.1V.36h-2v15.5h2v-5.3c0-2.1 1.3-3.6 3.3-3.6 1.8 0 2.9 1.4 2.9 3.2v5.7h2v-6.1c.1-3-1.8-4.9-4.5-4.9Zm15 .3h-4.8v-3.7h-2v3.8h-1.9v2h1.9v6c0 1.7 1 2.7 2.7 2.7h4.1v-2h-3.7c-.7 0-1.1-.4-1.1-1.1v-5.7h4.8v-2Zm14.5-.2c-1.6 0-2.9.8-3.5 2.1h-.1c-.6-1.2-1.8-2.1-3.4-2.1-1.4 0-2.5.8-3.1 1.8h-.1v-1.6H29v10.6h2v-5.4c0-2 1-3.5 2.6-3.5 1.5 0 2.4 1 2.4 2.6v6.3h2v-5.6c0-2.4 1.4-3.3 2.6-3.3 1.5 0 2.4 1 2.4 2.6v6.3h2v-6.5c.1-2.5-1.4-4.3-3.9-4.3Zm6.7 8.1c0 1.7 1 2.7 2.8 2.7h2v-2h-1.7c-.7 0-1.1-.4-1.1-1.1V.36h-2v12.7Zm-18.9 7c-.9-1.1-2.2-1.8-3.9-1.8-3.1 0-5.4 2.3-5.4 5.6s2.3 5.6 5.4 5.6c1.8 0 3-.8 3.8-1.9h.1v1.6h2v-10.6h-2v1.5Zm-3.6 7.4c-2.2 0-3.6-1.6-3.6-3.6s1.4-3.6 3.6-3.6 3.6 1.6 3.6 3.6c0 1.9-1.4 3.6-3.6 3.6Zm18.9-5.1c-.5-2.4-2.6-4.1-5.4-4.1a5.4 5.4 0 0 0-5.6 5.6c0 3.1 2.2 5.6 5.6 5.6 2.8 0 4.9-1.8 5.4-4.2h-2.1a3.4 3.4 0 0 1-3.3 2.3c-2.2 0-3.6-1.6-3.6-3.6s1.4-3.6 3.6-3.6c1.6 0 2.8 1 3.3 2.2h2.1v-.2Zm10.9-2.3c-.9-1.1-2.2-1.8-3.9-1.8-3.1 0-5.4 2.3-5.4 5.6s2.3 5.6 5.4 5.6c1.8 0 3-.8 3.8-1.9h.1v1.6h2v-10.6h-2v1.5Zm-3.6 7.4c-2.2 0-3.6-1.6-3.6-3.6s1.4-3.6 3.6-3.6 3.6 1.6 3.6 3.6c0 1.9-1.5 3.6-3.6 3.6Zm17.2-7.3c-.9-1.1-2.2-1.9-3.9-1.9-3.1 0-5.4 2.3-5.4 5.6s2.2 5.6 5.4 5.6c1.7 0 3-.8 3.8-1.8h.1v1.5h2v-15.4h-2v6.4Zm-3.6 7.3c-2.2 0-3.6-1.6-3.6-3.6s1.4-3.6 3.6-3.6 3.6 1.6 3.6 3.6c-.1 2-1.5 3.6-3.6 3.6Zm13.2-9.2c-3.3 0-5.5 2.5-5.5 5.6 0 3 2.1 5.6 5.5 5.6 2.5 0 4.5-1.3 5.2-3.6h-2.1c-.5 1-1.6 1.6-3 1.6-1.9 0-3.3-1.3-3.4-2.9h8.8c.2-3.6-2-6.3-5.5-6.3Zm0 1.9c1.7 0 3 1 3.3 2.6h-6.5c.3-1.5 1.5-2.6 3.2-2.6Zm19.9-1.9c-1.6 0-2.9.8-3.6 2h-.1c-.6-1.2-1.8-2-3.4-2-1.4 0-2.5.7-3.1 1.8v-1.5h-1.9v10.6h2v-5.4c0-2 1-3.4 2.6-3.5 1.5 0 2.4 1 2.4 2.6v6.3h2v-5.6c0-2.4 1.4-3.3 2.6-3.3 1.5 0 2.4 1 2.4 2.6v6.3h2v-6.5c.1-2.6-1.4-4.4-3.9-4.4Zm11.2 9.1-3.6-8.9h-2.2l4.8 11.6c-.3.9-.7 1.2-1.7 1.2h-2.5v2h2.5c1.8 0 2.8-.8 3.5-2.6l4.7-12.2h-2.1l-3.4 8.9Z"></path>
-              </svg>
+          <path d="M0 13.26v2.6h2.5v-2.6H0Zm11.6-8.4c-1.6 0-2.8.7-3.6 1.7h-.1V.36h-2v15.5h2v-5.3c0-2.1 1.3-3.6 3.3-3.6 1.8 0 2.9 1.4 2.9 3.2v5.7h2v-6.1c.1-3-1.8-4.9-4.5-4.9Zm15 .3h-4.8v-3.7h-2v3.8h-1.9v2h1.9v6c0 1.7 1 2.7 2.7 2.7h4.1v-2h-3.7c-.7 0-1.1-.4-1.1-1.1v-5.7h4.8v-2Zm14.5-.2c-1.6 0-2.9.8-3.5 2.1h-.1c-.6-1.2-1.8-2.1-3.4-2.1-1.4 0-2.5.8-3.1 1.8h-.1v-1.6H29v10.6h2v-5.4c0-2 1-3.5 2.6-3.5 1.5 0 2.4 1 2.4 2.6v6.3h2v-5.6c0-2.4 1.4-3.3 2.6-3.3 1.5 0 2.4 1 2.4 2.6v6.3h2v-6.5c.1-2.5-1.4-4.3-3.9-4.3Zm6.7 8.1c0 1.7 1 2.7 2.8 2.7h2v-2h-1.7c-.7 0-1.1-.4-1.1-1.1V.36h-2v12.7Zm-18.9 7c-.9-1.1-2.2-1.8-3.9-1.8-3.1 0-5.4 2.3-5.4 5.6s2.3 5.6 5.4 5.6c1.8 0 3-.8 3.8-1.9h.1v1.6h2v-10.6h-2v1.5Zm-3.6 7.4c-2.2 0-3.6-1.6-3.6-3.6s1.4-3.6 3.6-3.6 3.6 1.6 3.6 3.6c0 1.9-1.4 3.6-3.6 3.6Zm18.9-5.1c-.5-2.4-2.6-4.1-5.4-4.1a5.4 5.4 0 0 0-5.6 5.6c0 3.1 2.2 5.6 5.6 5.6 2.8 0 4.9-1.8 5.4-4.2h-2.1a3.4 3.4 0 0 1-3.3 2.3c-2.2 0-3.6-1.6-3.6-3.6s1.4-3.6 3.6-3.6c1.6 0 2.8 1 3.3 2.2h2.1v-.2Zm10.9-2.3c-.9-1.1-2.2-1.8-3.9-1.8-3.1 0-5.4 2.3-5.4 5.6s2.3 5.6 5.4 5.6c1.8 0 3-.8 3.8-1.9h.1v1.6h2v-10.6h-2v1.5Zm-3.6 7.4c-2.2 0-3.6-1.6-3.6-3.6s1.4-3.6 3.6-3.6 3.6 1.6 3.6 3.6c0 1.9-1.5 3.6-3.6 3.6Zm17.2-7.3c-.9-1.1-2.2-1.9-3.9-1.9-3.1 0-5.4 2.3-5.4 5.6s2.2 5.6 5.4 5.6c1.7 0 3-.8 3.8-1.8h.1v1.5h2v-15.4h-2v6.4Zm-3.6 7.3c-2.2 0-3.6-1.6-3.6-3.6s1.4-3.6 3.6-3.6 3.6 1.6 3.6 3.6c-.1 2-1.5 3.6-3.6 3.6Zm13.2-9.2c-3.3 0-5.5 2.5-5.5 5.6 0 3 2.1 5.6 5.5 5.6 2.5 0 4.5-1.3 5.2-3.6h-2.1c-.5 1-1.6 1.6-3 1.6-1.9 0-3.3-1.3-3.4-2.9h8.8c.2-3.6-2-6.3-5.5-6.3Zm0 1.9c1.7 0 3 1 3.3 2.6h-6.5c.3-1.5 1.5-2.6 3.2-2.6Zm19.9-1.9c-1.6 0-2.9.8-3.6 2h-.1c-.6-1.2-1.8-2-3.4-2-1.4 0-2.5.7-3.1 1.8v-1.5h-1.9v10.6h2v-5.4c0-2 1-3.4 2.6-3.5 1.5 0 2.4 1 2.4 2.6v6.3h2v-5.6c0-2.4 1.4-3.3 2.6-3.3 1.5 0 2.4 1 2.4 2.6v6.3h2v-6.5c.1-2.6-1.4-4.4-3.9-4.4Zm11.2 9.1-3.6-8.9h-2.2l4.8 11.6c-.3.9-.7 1.2-1.7 1.2h-2.5v2h2.5c1.8 0 2.8-.8 3.5-2.6l4.7-12.2h-2.1l-3.4 8.9Z"></path>
+        </svg>
       </a>
     </section>       
     </footer>
