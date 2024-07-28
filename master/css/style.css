@@ -69,7 +69,7 @@ body{
 }
 
 .visually-hidden{
-  position: absolute;
+	position: absolute;
   width: 1px;
   height: 1px;
   margin: -1px;
@@ -80,7 +80,7 @@ body{
 }
 
 .all-content{
-  margin: 0 auto;
+	margin: 0 auto;
   background-color: #ffffff;
   padding: 0;
   width: 1200px;
@@ -92,8 +92,10 @@ body{
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
 }
 
+ 	/* Начало шапки и стилей */
+
 .page-header{
-  color: #000000;
+	color: #000000;
   background: #ffffff;
   padding: 0 70px;
 }
@@ -101,14 +103,14 @@ body{
 /*Шапка сайта */
 
 .navigation{
-  display: flex;
+	display: flex;
   align-items: center;
   position: relative;
   margin: 0 auto;
 }
 
 .logo {
-  display: block;
+	display: block;
   width: 140px;
   height: 64px;
   margin-right: 30px;
@@ -122,7 +124,7 @@ body{
 }
 
 .navigation-list-main {
-  margin: 0;
+	margin: 0;
   padding: 0;
   width: 456px;
   flex-wrap: wrap;
@@ -133,7 +135,7 @@ body{
 }
 
 .navigation-link{
-  display: block;
+	display: block;
   padding: 20px 16px;
   font-size: 20px;
   font-weight: 700;
@@ -147,20 +149,20 @@ body{
 }
 
 .navigation-link:hover{
-  background-color: var(--buttons-blue-hover);
-  color: #ffffff;
-  transition: all 0.3s ease-out;
+	background-color: var(--buttons-blue-hover);
+	color: #ffffff;
+	transition: all 0.3s ease-out;
 }
 .navigation-link:focus {
-  color: var(--text-color-default);	
+	color: var(--text-color-default);	
 }
 
 .navigation-link:active {
-  color: rgba(117, 97, 87, 0.3);
+	color: rgba(117, 97, 87, 0.3);
 }
 
 .navigation-current {
-  cursor: pointer;
+	cursor: pointer;
   text-decoration: underline;
   text-decoration-color: #756257;
   text-decoration-thickness: 2px;
@@ -169,12 +171,12 @@ body{
 }
 
 .navigation-current:hover{
-  transition: all 0.3s ease-out;
-  text-decoration-color: #ffffff;
+	transition: all 0.3s ease-out;
+	text-decoration-color: #ffffff;
 }
 
 .navigation-user{
-  display: flex;
+	display: flex;
   flex-wrap: wrap;
   width: 280px;
   margin: 0;
@@ -187,7 +189,7 @@ body{
 
 .search-link,
 .favourites-link{
-  min-width: 44px;
+	min-width: 44px;
   min-height: 64px;
   position: relative;
   transition: all 0.3s ease-out;
@@ -203,7 +205,7 @@ body{
 }
 
 .favourites-icon{
-  position: absolute;
+	position: absolute;
   inset: 0;
   margin: auto;
   fill: #000000;	
@@ -216,7 +218,7 @@ body{
 }
 
 .count{
-  display: block;
+	display: block;
   min-width: 20px;
   height: 20px;
   font-size: 10px;
@@ -233,7 +235,7 @@ body{
 }
 
 .navigation-button{
-  font-family: inherit;
+	font-family: inherit;
   font-size: 16px;
   font-weight: 700;
   color: #ffffff;
@@ -274,9 +276,9 @@ body{
 }
 
 .hero {
-  background-color: var(--buttons-second);
-  background-image:url(../img/svg/divider.svg), url(../img/hero.jpg);
-  background-repeat: no-repeat;
+	background-color: var(--buttons-second);
+	background-image:url(../img/svg/divider.svg), url(../img/hero.jpg);
+	background-repeat: no-repeat;
   background-position: center bottom, center center;
   background-size: 100% auto, cover;
   padding: 51px;
@@ -322,7 +324,6 @@ body{
   justify-content: space-between;
   margin: 0 auto;
 }
-
 
 .content-with-img{
 	background-color:#82B3D3;
@@ -737,7 +738,7 @@ body{
 
 .modal-container {
   display: none;
- 	position: fixed;
+  position: fixed;
   z-index: 1;
   top: 0;
   left: 0;
@@ -809,9 +810,10 @@ body{
 
 .booking-item 
 .form-label{
+	font-family: inherit;
 	font-weight: 700;
 	font-size: 20px;
-	line-height: 120%;
+	line-height: 24px;
 	text-transform: capitalize;
 }
 
@@ -850,9 +852,10 @@ body{
 .departure input{
   width: 100%;
   height: 50px;
-	font-weight: 700;
-	font-size: 18px;
-	line-height: 133%;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 133%;
   background-color: #f2f2f2;
   border: 3px solid transparent;
   border-radius: 4px;
@@ -894,7 +897,7 @@ body{
 }
 
 .departure {
-  grid-area: departure;
+    grid-area: departure;
 }
 
 .departure-box::before{
@@ -1250,7 +1253,7 @@ body{
 }		
 
 .point-input{
-	color: #ffffff;
+  color: #ffffff;
   font-size: 18px;
   line-height: 128%;
   font-weight: 400;
@@ -1278,7 +1281,7 @@ body{
 }
 
 .pool, .parking, .wifi{
-  position: relative;
+	position: relative;
   display: block;
   padding-left: 36px;
   color: #ffffff;
@@ -1322,7 +1325,7 @@ body{
 }
 
 .hotel-field{
-  position: relative;
+	position: relative;
   display: block;
   cursor: pointer;
 }
@@ -1374,6 +1377,7 @@ body{
 .price-min:focus-visible,
 .price-max:focus-visible {
 	outline: 3px solid var(--icons-second);
+
 }
 
 .price-max:hover,
@@ -1752,7 +1756,7 @@ body{
 }
 
 .hotel-price{
-	display: flex;
+  display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
