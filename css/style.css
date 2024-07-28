@@ -46,7 +46,6 @@
 	src: url("../fonts/ptsans-700.woff2") format("woff2");
 }
 
-
 html {
   height: 100%;
 }
@@ -119,7 +118,7 @@ body{
 }
 
 .logo-img{
-	  display: block;
+	display: block;
 }
 
 .navigation-list-main {
@@ -768,7 +767,6 @@ body{
   scrollbar-width: none;
 }
 
-
 .modal-close-btn {
 	position: absolute;
 	padding: 0;
@@ -840,7 +838,6 @@ body{
 .arrival {
   grid-area: arrival;
 }
-
 
 .input-arriral,
 .input-field,
@@ -1044,7 +1041,6 @@ body{
   display: block;
 }
 
-
 .info-text::after {
   content: "";
   position: absolute;
@@ -1056,7 +1052,6 @@ body{
   border-style: solid;
   border-color: transparent transparent #333 transparent;
 }
-
 
 .get-item {
 	padding-left: 7px;
@@ -1379,7 +1374,6 @@ body{
   gap: 2px;
   position: relative;
 }
-
 
 .price-min:focus-visible,
 .price-max:focus-visible {
