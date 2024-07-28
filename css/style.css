@@ -701,7 +701,7 @@ body{
 	fill: var(--icons-second-active);
 }
 
-.footer-number{
+.footer-number-link{
 	font-weight: 400;
 	font-size: 40px;
 	line-height: 100%;
@@ -711,12 +711,12 @@ body{
 	text-decoration: none;
 }
 
-.footer-number:hover{
+.footer-number-link:hover{
 	color: var(--buttons-brown-hover);
 	transition: all 0.3s ease-out;
 }
 
-.footer-number:active{
+.footer-number-link:active{
 	color: var(--texts-active);
 }
 
